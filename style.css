@@ -1,0 +1,194 @@
+* {
+  gap: 0.2 rem;
+}
+
+body {
+  height: 100vw;
+  background-color: #a9a9a9;
+  color: #333;
+
+  margin: 20;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.2rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  grid-column: span 2;
+  background-color: #eee;
+  border-radius: 5px;
+  margin-top: -20px;
+  padding: 20px;
+}
+
+.links a {
+  color: blue;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: #9f6aa6;
+  text-decoration: underline;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: min(95%, 90rem);
+  padding-block: 2rem;
+  margin-inline: auto;
+}
+
+.header {
+  display: grid;
+  background-image: linear-gradient(to top left, #27293d, #9f6aa6);
+  color: white;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding-block: 5rem;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  border-radius: 0.75rem;
+  box-shadow: 5px 5px 60px #a9a9a9;
+}
+
+.section {
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+  row-gap: 2rem;
+  background-color: #ededed;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 4px 3px 100px #878787;
+
+  column-gap: 4rem;
+}
+
+.section .section-header {
+  justify-content: center;
+  font-size: 2rem;
+  color: #333;
+  font-weight: bold;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.formula {
+  background-color: #f1f1f1;
+  box-shadow: 5px 5px 20px #666;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.formula-title {
+  /* font-weight: 600; */
+  font-size: 1.3rem;
+  border-bottom: 1px solid black;
+  padding-bottom: 1rem;
+  margin-bottom: 15px;
+}
+
+.formula-equation {
+  display: grid;
+  justify-content: center;
+  padding-bottom: 2rem;
+  height: 120px;
+}
+.formula-equation img {
+  height: 100px;
+}
+
+.formula-parameters {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.formula-parameter-label {
+  display: grid;
+  justify-content: center;
+}
+
+.small {
+  font-size: 1rem;
+}
+
+.spacer {
+  display: grid;
+  grid-column: span 4;
+}
+
+.spacer8 {
+  display: grid;
+  grid-column: span 8;
+}
+
+.formula-parameter {
+  grid-column: span 3;
+  font-size: 1.5rem;
+}
+
+.formula-parameter::placeholder {
+  color: #ccc;
+}
+
+button {
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  background-color: #926aa6;
+  color: white;
+  padding: 0.5rem;
+}
+
+.btn-clear {
+  font-size: 1.2rem;
+  border-radius: 0.3rem;
+  background-color: #926aa6;
+  color: white;
+  padding: 0.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.col-span-3 {
+  grid-column: span 3;
+}
+
+.col-span-5 {
+  grid-column: span 4;
+}
+
+.col-span-2 {
+  grid-column: span 2;
+}
+
+.updated {
+  background-color: #926aa6;
+  color: white;
+}
+
+.fisher-parameters {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr 3fr);
+}
+
+.fisher-parameters .formula-parameter {
+  grid-column: span 1;
+}
+
+.calculated {
+  background-color: #fce4ff;
+}

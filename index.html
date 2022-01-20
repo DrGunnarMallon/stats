@@ -1,0 +1,398 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">My little statistics website</div>
+      <div class="links">
+        <a href="https://www.socscistatistics.com/tests/criticalvalues/default.aspx" target="__new">Critical values calculator</a>
+        <a href="https://www.socscistatistics.com/pvalues/tdistribution.aspx" target="__new">T-score to p-value</a>
+        <a href="https://www.socscistatistics.com/pvalues/fdistribution.aspx" target="__new">F-score to p-value</a>
+        <a href="https://www.socscistatistics.com/pvalues/normaldistribution.aspx" target="__new">Z-score to p-value</a>
+        <a href="https://homepage.divms.uiowa.edu/~mbognar/applets/bin.html" target="__new">Binomial Calculator</a>
+      </div>
+      <div class="formula pooled">
+        <div class="formula-title">Pooled variance for <i>i</i> group</div>
+        <div class="formula-equation"><img src="images/pooled.png" /></div>
+        <div class="formula-parameters">
+          <div class="formula-parameter-label col-span-3">List of n</div>
+          <input
+            type="text"
+            class="formula-parameter col-span-5 formula-pooled-n"
+            placeholder="e.g. 1,2,3,4,5"
+          />
+          <div class="formula-parameter-label col-span-3">
+            List of s (st. dev.)
+          </div>
+          <input
+            type="text"
+            class="formula-parameter col-span-5 formula-pooled-s"
+            placeholder="standard deviation"
+          />
+          <div class="formula-parameter-label col-span-3">
+            <span>List of s<sup>2</sup> (var.)</span>
+          </div>
+          <input
+            type="text"
+            class="formula-parameter col-span-5 formula-pooled-s2"
+            placeholder="variance"
+          />
+          <div class="formula-parameter-label col-span-3"><span>s<sub>p</sub><sup>2</sup></span></div>
+          <input class="formula-parameter formula-pooled-s2p col-span-5"></input>
+          <button class="btn-round formula-pooled-s2p-round">Round</button>
+
+          <div class="formula-parameter-label col-span-3"><span>s<sub>p</sub></span></div>
+          <input class="formula-parameter formula-pooled-sp col-span-5"></input>
+          <button class="btn-round formula-pooled-sp-round">Round</button>
+
+          <div></div>
+          <button class="btn-calculate col-span-2">Calculate</button>
+          <div class="spacer"></div>
+          <button class="btn-clear">Clear</button>
+        </div>
+      </div>
+      <div class="formula confidence-interval">
+        <div class="formula-title">Confidence interval for &mu;</div>
+        <div class="formula-equation"><img src="images/confidence.png" /></div>
+        <div class="formula-parameters">
+          <div class="formula-parameter-label">y</div>
+          <input type="text" class="formula-parameter formula-confidence-y" />
+          <div class="formula-parameter-label">t</div>
+          <input type="text" class="formula-parameter formula-confidence-t" />
+          <div class="formula-parameter-label">s</div>
+          <input type="text" class="formula-parameter formula-confidence-s" />
+          <div class="formula-parameter-label">n</div>
+          <input type="text" class="formula-parameter formula-confidence-n" />
+          <div class="formula-parameter-label">low</div>
+          <input type="text" class="formula-parameter formula-confidence-low" />
+          <div class="formula-parameter-label">up</div>
+          <input type="text" class="formula-parameter formula-confidence-up" />
+          <div>&nbsp;</div>
+          <button class="btn-calculate col-span-2">Calculate</button>
+          <div class="spacer"></div>
+          <button class="btn-clear btn-confidence-clean">Clear</button>
+        </div>
+      </div>
+      <div class="formula t-test">
+        <div class="formula-title">t-test for H: &mu;1 = &mu;2</div>
+        <div class="formula-equation"><img src="images/t-test.png" /></div>
+        <div class="formula-parameters">
+          <div class="formula-parameter-label"><span>y<sub>1</sub></span></div>
+          <input type="text" class="formula-parameter formula-t-test-y1" placeholder="mean 1" />
+          <div class="formula-parameter-label"><span>y<sub>2</sub></span></div>
+          <input type="text" class="formula-parameter formula-t-test-y2" placeholder="mean 2" />
+          <div class="formula-parameter-label"><span>n<sub>1</sub></span></div>
+          <input type="text" class="formula-parameter formula-t-test-n1" />
+          <div class="formula-parameter-label"><span>n<sub>2</sub></span></div>
+          <input type="text" class="formula-parameter formula-t-test-n2" />
+          <div class="formula-parameter-label"><span>s<sub>p</sub></span></div>
+          <input type="text" class="formula-parameter formula-t-test-sp" />
+          <div class="formula-parameter-label">t</div>
+          <input type="text" class="formula-parameter formula-t-test-t" />
+          <div></div>
+          <button class=" btn-t-test">Calculate</button>
+          <div class="spacer"></div>
+          <button class="btn-clear btn-t-test-clean">Clear</button>
+        </div>
+      </div>
+      <div class="formula test-h">
+        <div class="formula-title">Test for H: p = 0</div>
+        <div class="formula-equation"><img src="images/test-for-h.png" /></div>
+        <div class="formula-parameters">
+          <div class="formula-parameter-label">r</div>
+          <input type="text" class="formula-parameter formula-test-h-r" />
+          <div class="formula-parameter-label">n</div>
+          <input type="text" class="formula-parameter formula-test-h-n" />
+          <div class="formula-parameter-label">t</div>
+          <input type="text" class="formula-parameter formula-test-h-t" />
+          <div></div>
+          <div class="spacer8">&nbsp;</div>
+          <div></div>
+          <button class=" btn-test-h">Calculate</button>
+          <div class="spacer"></div>
+          <button class="btn-clear btn-test-h-clean">Clear</button>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-header">Contrasts:</div>
+        <div class="formula contrast">
+            <div class="formula-title">Sample estimation</div>
+            <div class="formula-equation"><img src="images/contrast-1.png"></div>
+            <div class="formula-parameters">
+                <div class="formula-parameter-label col-span-3">List of a</div>
+                <input
+                  type="text"
+                  class="formula-parameter col-span-5 formula-contrast-a"
+                  placeholder="list"
+                />
+                <div class="formula-parameter-label col-span-3">
+                  List of x
+                </div>
+                <input
+                  type="text"
+                  class="formula-parameter col-span-5 formula-contrast-x"
+                  placeholder="list"
+                />
+                <div class="formula-parameter-label col-span-3">
+                  c
+                </div>
+                <input
+                  type="text"
+                  class="formula-parameter col-span-5 formula-contrast-c"
+                />
+                <div class="col-span-5"></div>
+                <div>&nbsp;</div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <button class=" btn-contrast">Calculate</button>
+                <div class="spacer"></div>
+                <button class="btn-clear">Clear</button>
+              </div>
+        </div>
+        <div class="formula contrast-se">
+            <div class="formula-title">Standard error</div>
+            <div class="formula-equation"><img src="images/contrast-2.png"></div>
+            <div class="formula-parameters">
+                <div class="formula-parameter-label col-span-3">List of a</div>
+                <input
+                  type="text"
+                  class="formula-parameter col-span-5 formula-contrast-se-a"
+                  placeholder="list"
+                />
+                <div class="formula-parameter-label col-span-3">
+                  List of n
+                </div>
+                <input
+                  type="text"
+                  class="formula-parameter col-span-5 formula-contrast-se-n"
+                  placeholder="list"
+                />
+                <div class="formula-parameter-label col-span-3">
+                    <span>s<sub>p</sub></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="formula-parameter col-span-5 formula-contrast-se-sp"
+                  />
+                  <div class="formula-parameter-label col-span-3">
+                    <span>SE<sub>c</sub></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="formula-parameter col-span-5 formula-contrast-se-sec"
+                  />
+                <div></div>
+                <div></div>
+                <button class=" btn-contrast-se">Calculate</button>
+                <div class="spacer"></div>
+                <button class="btn-clear">Clear</button>
+              </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-header">Fisher Z-transformation</div>
+        <div class="formula fisher-transform">
+          <div class="formula-title">Transformation</div>
+          <div class="formula-equation">
+            <img src="images/fisher-transform.png" />
+          </div>
+          <div class="formula-parameters">
+            <div class="formula-parameter-label">r</div>
+            <input class="formula-parameter formula-fisher-transform-r" />
+            <div class="formula-parameter-label"><span>r<sub>z</sub></span></div>
+            <input class="formula-parameter formula-fisher-transform-rz" />
+            <div></div>
+            <button class="btn-fisher-transform">
+              Calculate
+            </button>
+            <div class="spacer"></div>
+            <button class="btn-clear">Clear</button>
+          </div>
+        </div>
+        <div class="formula fisher-inverse">
+          <div class="formula-title">Inverse transformation</div>
+          <div class="formula-equation">
+            <img src="images/fisher-inverse.png" />
+          </div>
+          <div class="formula-parameters">
+            <div class="formula-parameter-label"><span>r<sub>z</sub></span></div>
+            <input class="formula-parameter formula-fisher-inverse-rz" />
+            <div class="formula-parameter-label">r</div>
+            <input class="formula-parameter formula-fisher-inverse-r" />
+            <div></div>
+            <button class=" btn-fisher-inverse">Calculate</button>
+            <div class="spacer"></div>
+            <button class="btn-clear">Clear</button>
+          </div>
+        </div>
+        <div class="col-span-2 formula fisher-chain">
+            <div class="formula-title">Fisher chain calculation</div>
+            <div class="formula-equation"><img class="formula-equation" src="images/fisher-chain.png"></div>
+            <div class="fisher-container hidden">
+                <div class="fisher-parameters">
+                    <div class="formula-parameter-label">r</div>
+                    <input class="formula-parameter fisher-chain-r" />
+                    <div class="formula-parameter-label">n</div>
+                    <input class="formula-parameter fisher-chain-n" />
+                    <div class="formula-parameter-label">z</div>
+                    <input class="formula-parameter fisher-chain-z" />
+                    <div></div><div></div>
+                    <div class="formula-parameter-label">Lower</div>
+                    <input class="formula-parameter fisher-chain-plb" />
+                    <div class="formula-parameter-label">Upper</div>
+                    <input class="formula-parameter fisher-chain-pub" />
+                    <div></div>
+                    <div><button class=" btn-fisher-chain">Calculate</button></div>
+                    <div class="col-span-3"></div>
+                    <div align="right"><button class="btn-clear">Clear</button></div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-header">(Semi-)partial correlation</div>
+        <div class="formula semi-partial-pr1-m1">
+          <div class="formula-title">Partial correlation - Method 1</div>
+          <div class="formula-equation">
+            <img src="images/semi-pr1-m1.png" />
+          </div>
+          <div class="formula-parameters">
+            <div class="formula-parameter-label"><span>r<sub>y1</sub></span></div>
+            <input class="formula-parameter formula-semi-partial-pr1-m1-ry1" />
+            <div class="formula-parameter-label"><span>r<sub>y2</sub></span></div>
+            <input class="formula-parameter formula-semi-partial-pr1-m1-ry2" placeholder="controlled for"/>
+            <div class="formula-parameter-label"><span>r<sub>12</sub></span></div>
+            <input class="formula-parameter formula-semi-partial-pr1-m1-r12" />
+            <div class="formula-parameter-label"><span>pr<sub>1</sub></span></div>
+            <input class="formula-parameter formula-semi-partial-pr1-m1-pr1" />
+            <div></div>
+            <button class="btn-semi-partial-pr1-m1">
+              Calculate
+            </button>
+            <div class="spacer"></div>
+            <button class="btn-clear">Clear</button>
+          </div>
+        </div>
+        <div class="formula semi-partial-pr1-m2">
+          <div class="formula-title">Partial correlation - Method 2</div>
+          <div class="formula-equation">
+            <img src="images/semi-pr1-m2.png" />
+          </div>
+          <div class="formula-parameters">
+            <div class="formula-parameter-label"><span>R<sup>2</sup></span></div>
+            <input class="formula-parameter formula-semi-partial-pr1-m2-r2" />
+            <div class="formula-parameter-label"><span>r<sub>y2</sub></span></div>
+            <input class="formula-parameter formula-semi-partial-pr1-m2-ry2" />
+            <div class="formula-parameter-label"><span>pr<sub>1</sub></span></div>
+            <input class="formula-parameter formula-semi-partial-pr1-m2-pr1" />
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          <div></div>
+            <button class="btn-semi-partial-pr1-m2">
+              Calculate
+            </button>
+            <div class="spacer"></div>
+            <button class="btn-clear">Clear</button>
+          </div>
+        </div>
+        <div class="formula semi-partial-sr1-m1">
+          <div class="formula-title">Semi-partial correlation - Method 1</div>
+          <div class="formula-equation">
+            <img src="images/semi-sr1-m1.png" />
+          </div>
+          <div class="formula-parameters">
+            <div class="formula-parameter-label"><span>r<sub>y1</sub></span></div>
+            <input class="formula-parameter formula-semi-partial-sr1-m1-ry1" />
+            <div class="formula-parameter-label"><span>r<sub>y2</sub></span></div>
+            <input class="formula-parameter formula-semi-partial-sr1-m1-ry2" placeholder="controlled for" />
+            <div class="formula-parameter-label"><span>r<sub>12</sub></span></div>
+            <input class="formula-parameter formula-semi-partial-sr1-m1-r12" />
+            <div class="formula-parameter-label"><span>sr<sub>1</sub></span></div>
+            <input class="formula-parameter formula-semi-partial-sr1-m1-sr1" />
+            <div></div>
+            <button class="btn-semi-partial-sr1-m1">
+              Calculate
+            </button>
+            <div class="spacer"></div>
+            <button class="btn-clear">Clear</button>
+          </div>
+        </div>
+        <div class="formula semi-partial-sr1-m2">
+          <div class="formula-title">Semi-partial correlation - Method 2</div>
+          <div class="formula-equation">
+            <img src="images/semi-sr1-m2.png" />
+          </div>
+          <div class="formula-parameters">
+            <div class="formula-parameter-label"><span>R<sup>2</sup></span></div>
+            <input class="formula-parameter formula-semi-partial-sr1-m2-r2" />
+            <div class="formula-parameter-label"><span>r<sub>y2</sub></span></div>
+            <input class="formula-parameter formula-semi-partial-sr1-m2-ry2" />
+            <div class="formula-parameter-label"><span>sr<sub>1</sub></span></div>
+            <input class="formula-parameter formula-semi-partial-sr1-m2-sr1" />
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          <div></div>
+            <button class="btn-semi-partial-sr1-m2">
+              Calculate
+            </button>
+            <div class="spacer"></div>
+            <button class="btn-clear">Clear</button>
+          </div>
+        </div>
+
+      </div>
+      <div class="formula adjusted">
+         <div class="formula-title">Adjusted R<sup>2</sup></div>
+         <div class="formula-equation"><img src="images/adjusted.png"></div>
+         <div class="formula-parameters">
+            <div class="formula-parameter-label">R2</div>
+            <input type="text" class="formula-parameter formula-adjusted-r2" />
+            <div class="formula-parameter-label">p</div>
+            <input type="text" class="formula-parameter formula-adjusted-p" />
+            <div class="formula-parameter-label">n</div>
+            <input type="text" class="formula-parameter formula-adjusted-n" />
+            <div class="formula-parameter-label">R2(adj)</div>
+            <input type="text" class="formula-parameter formula-adjusted-r2adj" />
+            <div></div>
+            <button class=" btn-adjusted">Calculate</button>
+            <div class="spacer"></div>
+            <button class="btn-clear">Clear</button>
+          </div>
+      </div>
+      <div class="formula effect">
+          <div class="formula-title">Effect sizes</div>
+          <div class="formula-equation"><img src="images/effect-1.png"></div>
+          <div class="formula-equation"><img src="images/effect-2.png"></div>
+          <div class="formula-parameters">
+            <div class="formula-parameter-label col-span-3">Sum Squares (effect)</div>
+            <input type="text" class="formula-parameter col-span-5 effect-ss-effect" />
+            <div class="formula-parameter-label col-span-3">Sum Squares (error)</div>
+            <input type="text" class="formula-parameter col-span-5 effect-ss-error" />
+            <div class="formula-parameter-label col-span-3">Sum Squares (total)</div>
+            <input type="text" class="formula-parameter col-span-5 effect-ss-total" />
+            <div class="formula-parameter-label col-span-3">df (effect)</div>
+            <input type="text" class="formula-parameter col-span-5 effect-df-effect" />
+            <div class="formula-parameter-label col-span-3">MSE</div>
+            <input type="text" class="formula-parameter col-span-5 effect-mse" />
+            <div></div>
+            <div class="formula-parameter-label"><span>n<sub>p</sub><sup>2</sup></span></div>
+            <input type="text" class="formula-parameter effect-np2" readonly />
+            <div class="formula-parameter-label"><span>w<sup>2</sup></span></div>
+            <input type="text" class="formula-parameter effect-w2" readonly/>
+            <div></div>
+            <button class=" btn-effect">Calculate</button>
+            <div class="spacer"></div>
+            <button class="btn-clear">Clear</button>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>
